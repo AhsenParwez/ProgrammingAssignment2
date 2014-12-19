@@ -2,11 +2,13 @@
 ## Programming assignment of Coursera Course: R Programming
 ## Submitted by: Ahsen Parwez
 
-## This function creates a list that contains functions for the following:
-## First set and then get the matrix
-## First set and then get inverse of the above matrix
 
 makeCacheMatrix <- function(x = matrix()) {
+  
+  ## This function creates a list that contains functions for the following:
+  ## 1. First set and then get the matrix
+  ## 2. Then set and then get inverse of the above matrix
+  
   m <- NULL
   set <- function(y) {
     x <<- y
@@ -21,12 +23,14 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## This function calcultes inverse of the matrix
 
 cacheSolve <- function(x = matrix()) {
-## It first checks whether the inverse has been calculated.
-## If calculated, it obtains inverse from the cache.
-## If not, it calculates inverse and sets the value of inverse
+  
+  ## This function calcultes inverse of the matrix
+  ## It first checks whether the inverse has been calculated.
+  ## If calculated, it obtains inverse from the cache.
+  ## If not, it calculates inverse and sets the value of inverse
+  
   m <- x$getinv()
   if(!is.null(m)) {
     message("getting cached data")
